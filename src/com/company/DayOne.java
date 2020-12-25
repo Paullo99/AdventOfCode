@@ -7,8 +7,8 @@ import java.util.Scanner;
 
 public class DayOne {
 
-    private Scanner scanner;
-    private final ArrayList<Integer> arrayList = new ArrayList<Integer>();
+
+    private final ArrayList<Integer> arrayList = new ArrayList<>();
 
     public void readFile(){
         try{
@@ -35,7 +35,6 @@ public class DayOne {
                     System.out.println("Wynik mnożenia (2 liczby) to: " + (arrayList.get(j) * integer));
                     return;
                 }
-
             }
         }
     }
@@ -49,7 +48,6 @@ public class DayOne {
                             return;
                         }
                     }
-
                 }
             }
         }

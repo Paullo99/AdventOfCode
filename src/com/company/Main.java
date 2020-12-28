@@ -1,12 +1,5 @@
 package com.company;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.Scanner;
-
 public class Main {
 
     public static void main(String[] args) {
@@ -17,6 +10,7 @@ public class Main {
 */
         DayTwo dayTwo = new DayTwo();
         dayTwo.readFromFile();
-        System.out.println("Ilosc poprawnych haseł: " + dayTwo.checkCorrectPasswords());
+        System.out.println("Ilosc poprawnych haseł (1 gwiazdka): " + dayTwo.validPasswordsOldInterpretation());
+        System.out.println("Ilosc poprawnych haseł (2 gwiazdki): " + dayTwo.validPasswordsNewInterpretation());
     }
 }

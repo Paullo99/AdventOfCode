@@ -47,7 +47,7 @@ public class DayTwo {
         }
     }
 
-    public int checkCorrectPasswords(){
+    public int validPasswordsOldInterpretation(){
         int correctPasswords = 0;
         for(int i=0; i<inputLines.size(); i++){
             int counter =0;
@@ -57,6 +57,21 @@ public class DayTwo {
             }
             if(counter<=maxRangeArrayList.get(i) && counter>=minRangeArrayList.get(i))
                 correctPasswords++;
+        }
+        return correctPasswords;
+    }
+
+    public int validPasswordsNewInterpretation(){
+        int correctPasswords = 0;
+        for(int i=0; i<inputLines.size(); i++){
+
+            if(passwordArraylist.get(i).charAt(minRangeArrayList.get(i)-1)==letterArrayList.get(i))
+                if(passwordArraylist.get(i).charAt(maxRangeArrayList.get(i)-1)!=letterArrayList.get(i))
+                    correctPasswords++;
+
+            if(passwordArraylist.get(i).charAt(maxRangeArrayList.get(i)-1)==letterArrayList.get(i))
+                if(passwordArraylist.get(i).charAt(minRangeArrayList.get(i)-1)!=letterArrayList.get(i))
+                    correctPasswords++;
         }
         return correctPasswords;
     }

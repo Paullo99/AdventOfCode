@@ -10,11 +10,8 @@ public class DayOne {
 
     private final ArrayList<Integer> arrayList = new ArrayList<>();
 
-    public void readFile(){
+    public void readFile(String filename){
         try{
-            System.out.println("Podaj nazwę pliku .txt: ");
-            Scanner inputFilenameScanner = new Scanner(System.in);
-            String filename = inputFilenameScanner.nextLine();
             File file = new File(filename);
             Scanner fileScanner = new Scanner(file);
             int i = 0;

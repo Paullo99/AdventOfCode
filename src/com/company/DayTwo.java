@@ -12,11 +12,8 @@ public class DayTwo {
     private final ArrayList<Character> letterArrayList = new ArrayList<>();
     private final ArrayList<String> passwordArraylist = new ArrayList<>();
 
-    public void readFromFile(){
+    public void readFromFile(String filename){
         try{
-            System.out.println("Podaj nazwę pliku .txt: ");
-            Scanner inputFilenameScanner = new Scanner(System.in);
-            String filename = inputFilenameScanner.nextLine();
             File file = new File(filename);
             Scanner fileScanner = new Scanner(file);
             while (fileScanner.hasNext()) {
